@@ -11,10 +11,7 @@ User details
 
 Login function
 
-        This aspect will ask for the username and password. Errors will occur if a space is left
-blank, the username doesn’t exist, or the password doesn’t match with the username. If
-the username and password matches, you are online and able to message anyone else
-online.
+        This aspect will ask for the username and password. Errors will occur if a space is left blank, the username doesn’t exist, or the password doesn’t match with the username. If the username and password matches, you are online and able to message anyone else online.
 
 
 Username
