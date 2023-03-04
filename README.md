@@ -18,16 +18,14 @@ Username
 
 
 
+Password
+
+        A Password is a word, phrase, or string of characters intended to differentiate an authorized user or process (for the purpose of permitting access) from an unauthorized user, or put another way, a password is used to prove one's identity, or authorize access to a resource.
+
+
+
 
 Chat 
       
         A chat application makes it easy to communicate with people anywhere in the world by sending and receiving messages in real time. With the chat app, users are able to receive the same engaging and lively interactions through custom messaging features, just as they would in person.
-
-
-
-
-
-
-Voice call
-          
-         This app also contains a special feature named voice calling.It is a pure software-based call, where audio information is transmitted over the Internet between caller and callee.
+ 
