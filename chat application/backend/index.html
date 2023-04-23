@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src=”/socket.io/socket.io.js”></script>
+<title>coderszine.com - chat application with Node.js</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script>
+  var socket = io();
+
+socket.on('message', addMessages)
+</script>
+<script>
+function addMessages(message){
+	$("#messages").append('<div><strong>'+message.name.charAt(0).toUpperCase()+message.name.slice(1)+'</strong> says: <br><span>'+message.message+'</span></div><hr/>');
+}
+
+function getMessages(){
+  $.get('http://localhost:3000/messages', (data) => {
+	data.forEach(addMessages);
+  })
+}
+
+function sendMessage(message){
+  $.post('http://localhost:3000/messages', message)
+  $("#name").val("");
+  $("#message").val("");
+}
+  
+</script>
+</head>
+<body>
+<div class="container">
+    <br>
+    <div class="jumbotron">
+        <h1 class="display-4">Chitchat</h1>
+        <br>
+		<div id="messages">
+		</div>
+        <input id="name" class="form-control" placeholder="Recipient Name...">
+        <br>
+        <textarea id="message" class="form-control" placeholder="Message..."></textarea>
+        <br>
+        <button id="send" class="btn btn-success">Send</button>
+    </div>    
+</div>
+</body>
+</html>
+
+
